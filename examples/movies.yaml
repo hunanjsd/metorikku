@@ -24,9 +24,9 @@ output:
 
 # If set to true, triggers Explain before saving
 explain: true
-
-# Set Log Level : ALL, DEBUG, ERROR, FATAL, INFO, OFF, TRACE, WARN
-logLevel: WARN
+Log Level : ALL, DEBUG, ERROR, FATAL, INFO, OFF, TRACE, WARN
+  logLev
+# Set el: WARN
 
 # Set Application Name to have app name prefix in spark instrumentation counters
 appName: moviesApp

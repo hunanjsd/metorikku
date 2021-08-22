@@ -18,6 +18,7 @@ object Metorikku extends App {
         executePeriodicTask(periodic, job)
       }
       case _ => {
+        /** 执行 metric 任务 */
         runMetrics(job)
         try {
           job.instrumentationClient.close()

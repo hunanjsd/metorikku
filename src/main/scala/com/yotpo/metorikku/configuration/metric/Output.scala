@@ -3,6 +3,7 @@ package com.yotpo.metorikku.configuration.metric
 import com.fasterxml.jackson.core.`type`.TypeReference
 import com.fasterxml.jackson.module.scala.JsonScalaEnumeration
 
+/** metric 里面定义的 output 类型 */
 case class Output(name: Option[String],
                   dataFrameName: String,
                   @JsonScalaEnumeration(classOf[OutputTypeReference]) outputType: OutputType.OutputType,

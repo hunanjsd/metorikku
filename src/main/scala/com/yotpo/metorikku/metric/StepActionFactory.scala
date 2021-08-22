@@ -13,7 +13,7 @@ object StepFactory {
                     showPreviewLines: Int, cacheOnPreview: Option[Boolean],
                     showQuery: Option[Boolean], dqConfigurator: DeequFactory): StepAction[_] = {
     configuration.sql match {
-
+      /** 处理简单的 sql 语句 */
       case Some(expression) => Sql(expression,
         configuration.dataFrameName,
         showPreviewLines, cacheOnPreview,
@@ -22,6 +22,7 @@ object StepFactory {
 
       case None => {
         configuration.file match {
+          /** 处理 sql 文件 */
           case Some(filePath) =>
             val path = metricDir match {
               case Some(dir) => new File(dir, filePath).getPath
@@ -37,6 +38,7 @@ object StepFactory {
 
           case None => {
             configuration.classpath match {
+                /** 处理 udf 的 */
               case Some(cp) => {
                 Code(cp, metricName, configuration.dataFrameName, configuration.params)
               }

@@ -87,6 +87,7 @@ case class Metric(configuration: Configuration, metricDir: Option[File], metricN
   }
 
   private def writeBatch(dataFrame: DataFrame,
+  private def writeBatch(dataFrame: DataFrame,
                          dataFrameName: String,
                          writer: Writer,
                          outputConfig: Output,

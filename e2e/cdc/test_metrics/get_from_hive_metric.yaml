@@ -1,4 +1,4 @@
-steps:
+wsteps:
 - dataFrameName: hoodie_hive_test
   sql:
     SELECT *

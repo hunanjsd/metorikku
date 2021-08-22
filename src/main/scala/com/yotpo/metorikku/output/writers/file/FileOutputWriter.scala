@@ -23,7 +23,7 @@ class FileOutputWriter(props: Map[String, Any], outputFile: Option[File]) extend
                                    protectFromEmptyOutput: Option[Boolean],
                                    extraOptions: Option[Map[String, String]])
 
-  val fileOutputProperties = FileOutputProperties(
+  val fileOutputProperties: FileOutputProperties = FileOutputProperties(
     props.get("path").asInstanceOf[Option[String]],
     props.get("createUniquePath").asInstanceOf[Option[Boolean]],
     props.get("saveMode").asInstanceOf[Option[String]],

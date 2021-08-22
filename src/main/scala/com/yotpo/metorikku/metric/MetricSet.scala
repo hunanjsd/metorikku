@@ -45,8 +45,11 @@ class MetricSet(metricSet: String, write: Boolean = true) {
     metrics.foreach(metric => {
       val startTime = System.nanoTime()
 
+      /** 计算 metric 任务 */
       metric.calculate(job)
+
       if (write) {
+        /** 计算完一个 metric 以后才 save  */
         metric.write(job)
       }
 

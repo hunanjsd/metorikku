@@ -2,6 +2,7 @@ package com.yotpo.metorikku.configuration.job
 import com.yotpo.metorikku.input.Reader
 import com.yotpo.metorikku.utils.FileUtils.getEnvProperties
 
+/** job 的配置项 */
 case class Configuration(metrics: Option[Seq[String]],
                          inputs: Option[Map[String, Input]],
                          variables: Option[Map[String, String]],
